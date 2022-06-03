@@ -137,9 +137,6 @@ possible_items = [
     {"name": "U", "weight": 3, "value": 10},
     {"name": "V", "weight": 2, "value": 7},
     {"name": "W", "weight": 1, "value": 8},
-    {"name": "X", "weight": 4, "value": 9},
-    {"name": "Y", "weight": 5, "value": 10},
-    {"name": "Z", "weight": 3, "value": 11},
 ]
 def max_fitness(solutions, possible_items, max_weight):
     max_fitness = 0
@@ -159,7 +156,7 @@ crossover_rate = 0.8
 mutation_rate = 0.05
 
 solutions = init_solutions(population_size, len(possible_items))
-print(solutions)
+# print(solutions)
 print("Max fitness: " + str(max_fitness(solutions, possible_items, max_weight)[0]))
 print("Max items: " + str(max_fitness(solutions, possible_items, max_weight)[1]))
 solutions = optimize(solutions, generations, num_elitists, crossover_rate, mutation_rate, possible_items, max_weight)
